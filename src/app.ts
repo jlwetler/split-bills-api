@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import authRouter from "./routes/authRouter"
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.get("/test", (req, res) => {
     res.send("OK");
 })
 
+app.use(authRouter);
 
 
 
