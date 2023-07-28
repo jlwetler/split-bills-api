@@ -9,3 +9,11 @@ export interface UserObjectHash {
     email: string, 
     hashPassword: string
 };
+
+export interface Session {
+    id: number,
+    name: string, 
+    email: string,
+    token: string
+
+}

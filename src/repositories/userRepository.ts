@@ -24,3 +24,12 @@ export async function insertUserData(params: UserObjectHash) {
         data: user
     })
 }
+
+export async function findUser(email: string) {
+    const user = prisma.user.findFirst({
+        where: {
+            email
+        }
+    })
+    return user;
+}
